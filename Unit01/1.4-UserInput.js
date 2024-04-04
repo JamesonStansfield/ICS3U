@@ -1,3 +1,4 @@
+const prompt = require('prompt-sync')();
 //Task
 
 console.log("1.4 - User Input");
