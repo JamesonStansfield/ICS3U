@@ -1,7 +1,7 @@
 const prompt = require('prompt-sync')();
 //Task
 
-let age = Number(prompt("What is your age?"));
+let age = parseInt(prompt("What is your age?"));
 if (age >= 50) {
     console.log("You qualify for the senior discount!");
 } else if (age < 16) {
@@ -14,7 +14,7 @@ if (user_name = "Mr. J") {
 if (user_name.length >= 7) {
     console.log("You have a long name.");
 }
-let nameLength = Number(prompt("How long is your name?"));
+let nameLength = parseInt(prompt("How long is your name?"));
 if (nameLength = user_name.length) {
     console.log("That's correct! ✔️");
 } else if (nameLength > user_name.length) {
