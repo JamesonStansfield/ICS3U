@@ -7,13 +7,15 @@ function whoAreYou() {
     let userHobby = prompt('What is your favourite hobby?: ');
     console.log('Hello, ' + userName + ', you are ' + userAge + ' years old and your favourite hobby is ' + userHobby + '!');
 };
+whoAreYou();
 
 //Tax Calculator
-function tax_calculator(dollars) {
+function tax_calculator() {
     let dollars = parseInt(prompt('How much money do you have to convert?: '));
-    let taxxedSum = dollars * 1.13;
-    console.log('Your Sum Including Tax: ' + taxxedSum + '\n Tax Added (13%) ');
-};
+    let taxedSum = dollars * 1.13;
+    console.log('Your Sum Including Tax: ' + taxedSum + '\n Tax Added (13%) ');
+}
+tax_calculator();
 
 //Calculator
 function calculator(operator) {
@@ -67,8 +69,4 @@ function pythagorean(legA, legB, Hypoteneuse) {
 
 //Tasks Above
 
-//Functions:
-//whoAreYou();
-//tax_calculator();
-//calculator();
-//pythagorean();
+
