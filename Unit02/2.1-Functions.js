@@ -6,7 +6,7 @@ function whoAreYou() {
     let userAge = parseInt(prompt('How old are you? (Ex: 16): '))
     let userHobby = prompt('What is your favourite hobby?: ');
     console.log('Hello, ' + userName + ', you are ' + userAge + ' years old and your favourite hobby is ' + userHobby + '!');
-};
+}
 whoAreYou();
 
 //Tax Calculator
@@ -21,22 +21,22 @@ tax_calculator();
 function calculator(operator) {
     let firstNumber = parseInt(prompt('Give me your first number: '));
     let secondNumber = parseInt(prompt('Give me your second number: '));
-    if (firstNumber >= secondNumber) {
+    if (operator == '+') {
+        let sumAdd = firstNumber + secondNumber;
+        console.log(firstNumber + '+' + secondNumber + '=' + sumAdd);
+    } else if (operator == '-') {
         let sumSub = firstNumber - secondNumber;
         console.log(firstNumber + '-' + secondNumber + '=' + sumSub);
+    } else if (operator == '*') {
+        let sumMul = firstNumber * secondNumber;
+        console.log(firstNumber + 'x' + secondNumber + '=' + sumMul);
+    } else if (operator == '/') {
         let sumDiv = firstNumber / secondNumber;
         console.log(firstNumber + '/' + secondNumber + '=' + sumDiv);
-        let sumAdd = firstNumber + secondNumber;
-        console.log(firstNumber + '+' + secondNumber + '=' + sumAdd);
-        let sumMult = firstNumber * secondNumber;
-        console.log(firstNumber + 'x' + secondNumber + '=' + sumMult);
-    } else if (firstNumber < secondNumber) {
-        let sumMult = firstNumber * secondNumber;
-        console.log(firstNumber + 'x' + secondNumber + '=' + sumMult);
-        let sumAdd = firstNumber + secondNumber;
-        console.log(firstNumber + '+' + secondNumber + '=' + sumAdd);
     }
-};
+}
+//enter operator of choice here:
+calculator('/');
 
 //Pythagorean Theorem
 
@@ -65,7 +65,7 @@ function pythagorean(legA, legB, Hypoteneuse) {
         legB = Math.sqrt(Hypoteneuse**2 - legA**2);
         console.log('The "b" leg is: ' + legB);
     }
-};
+}
 
 //Tasks Above
 
