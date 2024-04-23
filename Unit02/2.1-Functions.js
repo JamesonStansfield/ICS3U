@@ -40,33 +40,19 @@ calculator('/');
 
 //Pythagorean Theorem
 
-function pythagorean(legA, legB, Hypoteneuse) {
-    let legA = 0;
-    let legB = 0;
-    let Hypoteneuse = 0;
-    let userPick = prompt('What are you solving for? (Options: legA, legB, Hypoteneuse): ')
-    userPick = userPick.toLowerCase;
-    if (userPick == 'lega' || 'legb') {
-        userPick = userPick.toLocaleUpperCase[userPick.length -1];
-    }
-    if (userPick == 'hypoteneuse') {
-        legA = parseInt(prompt('What is the "a" leg?: '));
-        legB = parseInt(prompt('What is the "b" leg?: '));
-        Hypoteneuse = Math.sqrt(legA**2 + legA**2);
-        console.log('The hypoteneuse is: ' + Hypoteneuse);
-    } else if (userPick == 'LegA') {
-        Hypoteneuse = parseInt(prompt('What is the hypoteneuse: '));
-        legB = parseInt(prompt('What is the "b" leg?: '));
-        legA = Math.sqrt(Hypoteneuse**2 - legB**2);
+function pythagorean(legA, legB, hypotenuse) {
+    if (legA !== undefined && legB !== undefined && hypotenuse == undefined) {
+        hypotenuse = Math.sqrt(legA ** 2 + legB ** 2);
+        console.log('The hypotenuse is: ' + hypotenuse);
+    } else if (legA == undefined && legB !== undefined && hypotenuse !== undefined) {
+        legA = Math.sqrt(hypotenuse ** 2 - legB ** 2);
         console.log('The "a" leg is: ' + legA);
-    } else if (userPick == 'legB') {
-        Hypoteneuse = parseInt(prompt('What is the hypoteneuse: '));
-        legA = parseInt(prompt('What is the "a" leg?: '));
-        legB = Math.sqrt(Hypoteneuse**2 - legA**2);
+    } else if (legA !== undefined && legB == undefined && hypotenuse !== undefined) {
+        legB = Math.sqrt(hypotenuse ** 2 - legA ** 2);
         console.log('The "b" leg is: ' + legB);
     }
 }
-
+pythagorean(4, undefined, 7);
 //Tasks Above
 
 
