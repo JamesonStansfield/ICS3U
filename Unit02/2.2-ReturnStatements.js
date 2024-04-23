@@ -1,6 +1,7 @@
 const prompt = require("prompt-sync")();
 
 //Is it the weekend?
+let day = undefined;
 function isItTheWeekend(day) {
     day = parseInt(prompt('What is the day of the week? (1-7): '));
     if (day == 7 || day == 1) {
@@ -9,6 +10,8 @@ function isItTheWeekend(day) {
         return false;
     }
 }
+isItTheWeekend();
+console.log(day);
 
 //Even number divisable by 9
 function evNineIble(value) {
