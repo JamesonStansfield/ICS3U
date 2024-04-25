@@ -1,17 +1,20 @@
 const prompt = require("prompt-sync")();
 
 //Is it the weekend?
-let day = undefined;
+
 function isItTheWeekend(day) {
-    day = parseInt(prompt('What is the day of the week? (1-7): '));
+    day = parseInt(prompt('What day of the week is it? (1-7): '));
     if (day == 7 || day == 1) {
         return true;
     } else {
         return false;
     }
 }
-isItTheWeekend();
-console.log(day);
+
+//let result = isItTheWeekend();
+//console.log('Is it the weekend: ' + result);
+
+
 
 //Even number divisable by 9
 function evNineIble(value) {
@@ -22,6 +25,10 @@ function evNineIble(value) {
         return false;
     }
 }
+//let isDiv = evNineIble();
+//console.log('Is it divisible and even?: ' + isDiv);
+
+
 
 //Surface area of a cylinder (medium)
 function areaCircle(r) {
@@ -39,14 +46,14 @@ function areaCylinder(r, h) {
     return TSA;
 }
 
+
 //Creepy Ghosts
 function ghostWatch(polter, wolter) {
-    console.log('There are 3 emotions assigned to their numbers: \n1: Neutral \n2: Angry \n3: Laughing');
-    polter = parseInt(prompt('Which number of emotion is polter experiencing?: '));
-    wolter = parseInt(prompt('Which number of emotion is wolter experiencing?: '));
-    if (polter & wolter == 2 || polter & wolter == 3 || polter == 2 & wolter == 3 || polter == 3 & wolter == 2) {
+    if (polter && wolter == 2 || polter && wolter == 3 || polter == 2 && wolter == 3 || polter == 3 && wolter == 2) {
         return true;
     } else {
         return false;
     }
 }
+let emotion = ghostWatch(2, 2);
+console.log('Too much emotion?: ' + emotion);
