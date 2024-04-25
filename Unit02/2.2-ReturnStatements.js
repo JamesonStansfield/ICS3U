@@ -11,8 +11,8 @@ function isItTheWeekend(day) {
     }
 }
 
-//let result = isItTheWeekend();
-//console.log('Is it the weekend: ' + result);
+let result = isItTheWeekend();
+console.log('Is it the weekend: ' + result);
 
 
 
@@ -25,8 +25,8 @@ function evNineIble(value) {
         return false;
     }
 }
-//let isDiv = evNineIble();
-//console.log('Is it divisible and even?: ' + isDiv);
+let isDiv = evNineIble();
+console.log('Is it divisible and even?: ' + isDiv);
 
 
 
