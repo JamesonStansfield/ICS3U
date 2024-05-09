@@ -32,21 +32,22 @@ function min(arr) {
 
 function longest_string(arr) {
     let longest = 0;
-    let last = arr[1];
+    let last = arr[0].length;                           //the previouse is initiated as the first
     let count = 0;
     for (let i = 0; i < arr.length; i++) {
-        for (let l = 0; l < arr[i.length]; l++) {
-            count += 1;
+        count = 0;                                      //reset counter
+        for (let l = 0; l < arr[i].length; l++) {
+            count += 1;                                 //counts the length of the string
         }
-        if (count > last) {
-            longest = arr[i.length];
+        if (count > longest) {                          //if the count integer is larger than the longest (which is either larger than the starting value or another string), set the integer
+            longest = count;
         }
-        last = arr[i];
+        last = arr[i];                                  //update the previous
     }
-    return longest;
+    return longest;                                     //after checking everything, return the longest
 }
 
-//console.log(longest_string(['Mr', 'Jamieson', 'Is', 'The', 'Best', 'Teacher']));
+//console.log(longest_string(['Mr', 'Jamieson', 'Is', 'The', 'Best', 'Teacher']));          //function decleration
 
 
 //Task #4: Contains
