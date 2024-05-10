@@ -73,23 +73,29 @@ function contains(arr, value) {
 //Task #5: Min, Max
 
 function min_max(arr) {
-    let last = arr[0];
-    let min = 0;
-    let max = 0;
+    let min = arr[0];                                   //Setting minimum to the first string of the array
+    let max = arr[0];                                   //Setting maximum to the first string of the array
     for (let i = 0; i < arr.length; i++) {
-        if (i < last || i < min) {
-            min = arr[i];
+        if (arr[i] < min) {                             //Checking if the current string of the array is lower than the minimum
+            min = arr[i];                               //If so, update the minimum
         }
-        last = arr[i];
-    }
-    last = arr[0];
-    for (let i = 0; i < arr.length; i++) {
-        if (i > last || i > max) {
-            max = arr[i];
+        if (arr[i] > max) {                             //Checking if the current string of the array is higher than the maximum
+            max = arr[i];                               //If so, update the maximum
         }
-        last = arr[i];
     }
     console.log(min, max);
 }
 
-min_max([4,7,2,6,]);
+//min_max([4,7,2,6,9]);                                   //Funciton calling
+
+//Task #6: Sum
+
+function sum(arr) {
+    let sum = 0;                                        //Starting sum at 0
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];                                  //Checking each integer in the array and adding each to the total sum
+    }
+    return sum;                                         //Returning it to be logged
+}
+
+//console.log(sum([5,3,2]));                            //Function Called
