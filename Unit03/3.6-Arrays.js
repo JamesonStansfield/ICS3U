@@ -66,3 +66,30 @@ function contains(arr, value) {
 }
 
 //console.log(contains(containVals, 7));                //Function Declaration
+
+
+//Challenge Tasks:
+
+//Task #5: Min, Max
+
+function min_max(arr) {
+    let last = arr[0];
+    let min = 0;
+    let max = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (i < last || i < min) {
+            min = arr[i];
+        }
+        last = arr[i];
+    }
+    last = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+        if (i > last || i > max) {
+            max = arr[i];
+        }
+        last = arr[i];
+    }
+    console.log(min, max);
+}
+
+min_max([4,7,2,6,]);
